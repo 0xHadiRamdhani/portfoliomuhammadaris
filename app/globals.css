@@ -137,7 +137,7 @@ h2 { margin: 7px 0; font-size: clamp(27px, 3vw, 38px); letter-spacing: -.045em; 
 .about { display: grid; grid-template-columns: .8fr 1fr; align-items: center; gap: 76px; }
 .portrait { position: relative; min-height: 470px; display: grid; place-items: center; overflow: hidden; border: 1px solid #82d8ff33; border-radius: 26px; background: radial-gradient(circle at 50% 40%, #335d78, #121c2c 62%); }
 .portrait > i { position: absolute; width: 350px; height: 350px; border: 1px solid #82d8ff52; border-radius: 50%; box-shadow: 0 0 0 35px #82d8ff08, 0 0 0 70px #82d8ff05; }
-.portrait > b { z-index: 1; color: #d7f5ff; font-size: 90px; letter-spacing: -.1em; }
+.portrait-image { z-index: 1; width: min(78%, 360px); height: min(78%, 360px); object-fit: cover; border-radius: 50%; border: 2px solid #82d8ff66; box-shadow: 0 20px 60px #07101dcc; }
 .portrait > div { position: absolute; right: 18px; bottom: 18px; left: 18px; padding: 14px; border: 1px solid #ffffff0d; border-radius: 15px; background: #101827df; }
 .portrait strong, .portrait span { display: block; }
 .portrait span { margin-top: 3px; color: var(--cyan); font: 10px monospace; }

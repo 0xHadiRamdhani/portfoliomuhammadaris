@@ -1,7 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Image from "next/image";
 import { navigation, projects, skills, statistics, values } from "@/app/data/portfolio";
+import profileImage from "../../assets/image.png";
 
 function SectionLabel({ children, muted = false }: { children: React.ReactNode; muted?: boolean }) {
   return <span className={muted ? "label label-muted" : "label"}>{children}</span>;
@@ -35,7 +37,6 @@ export default function Portfolio() {
     </header>
 
     <section id="beranda" className="hero section">
-      <span className="eyebrow"><i /> Terbuka untuk kolaborasi &amp; proyek baru</span>
       <p className="kicker">Portfolio / 2026</p>
       <h1>Merancang arsitektur &amp; pengalaman digital bersama <em>Muhammad Aris</em></h1>
       <p className="hero-copy">Full-Stack Developer &amp; Creative Technologist yang merancang pengalaman digital berkinerja tinggi, elegan, dan berdampak nyata.</p>
@@ -49,7 +50,7 @@ export default function Portfolio() {
 
     <section id="keterampilan" className="section section-space"><div className="center"><SectionLabel muted>Matriks Keahlian</SectionLabel><h2>Teknologi &amp; kompetensi inti</h2><p>Kombinasi keahlian frontend interaktif, rekayasa backend tangguh, dan otomatisasi infrastruktur awan.</p></div><div className="skill-grid">{skills.map((skill) => <article className={`card skill ${skill.accent}`} key={skill.title}><b className="skill-icon">{skill.icon}</b><h3>{skill.title}</h3><p>{skill.description}</p><div className="bars">{skill.levels.map((level) => <div key={level.label}><span>{level.label}<b>{level.value}%</b></span><i><em style={{ width: `${level.value}%` }} /></i></div>)}</div></article>)}</div></section>
 
-    <section id="tentang" className="section about section-space"><div className="portrait"><i /><b>MA</b><div><strong>Muhammad Aris</strong><span>Based in Jakarta, Indonesia</span></div></div><div><SectionLabel>Mengenal Lebih Dekat</SectionLabel><h2>Menggabungkan rekayasa sistem dengan cita rasa desain</h2><p>Saya percaya perangkat lunak terbaik lahir dari pertemuan antara logika sistemik yang solid dan estetika antarmuka yang membangkitkan emosi.</p><p>Fokus saya adalah menjembatani visi produk yang ambisius menjadi arsitektur nyata yang siap tumbuh bersama penggunanya.</p><div className="values">{values.map((value) => <div key={value.title}><b>{value.icon}</b><strong>{value.title}</strong><span>{value.description}</span></div>)}</div></div></section>
+    <section id="tentang" className="section about section-space"><div className="portrait"><i /><Image className="portrait-image" src={profileImage} alt="Muhammad Aris" priority /><div><strong>Muhammad Aris</strong><span>Based in Jakarta, Indonesia</span></div></div><div><SectionLabel>Mengenal Lebih Dekat</SectionLabel><h2>Menggabungkan rekayasa sistem dengan cita rasa desain</h2><p>Saya percaya perangkat lunak terbaik lahir dari pertemuan antara logika sistemik yang solid dan estetika antarmuka yang membangkitkan emosi.</p><p>Fokus saya adalah menjembatani visi produk yang ambisius menjadi arsitektur nyata yang siap tumbuh bersama penggunanya.</p><div className="values">{values.map((value) => <div key={value.title}><b>{value.icon}</b><strong>{value.title}</strong><span>{value.description}</span></div>)}</div></div></section>
 
     <section id="kontak" className="section contact"><div><span className="eyebrow">Mulai sesuatu yang baru</span><h2>Punya ide luar biasa? Mari wujudkan bersama.</h2><p>Butuh platform berskala besar, sistem performa tinggi, atau konsultasi produk digital? Hubungi saya kapan saja.</p><div className="details">✉ <a href="mailto:hello@muhammadaris.dev">hello@muhammadaris.dev</a><br />◷ Maksimal 24 jam kerja</div></div><ContactForm /></section>
     <footer><div><strong><i /> Muhammad Aris</strong><p>Merancang arsitektur sistem perangkat lunak performa tinggi dan pengalaman digital interaktif.</p></div><div className="socials"><a href="https://github.com">GH</a><a href="https://linkedin.com">in</a><a href="mailto:hello@muhammadaris.dev">@</a></div><small>© 2026 Muhammad Aris · Jakarta, ID</small></footer>
