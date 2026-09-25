@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-fixed":"#2e1065","on-primary-container":"#e0e2ff","primary":"#6366f1","on-tertiary-container":"#3b1f63","outline-variant":"#d0d2dc","primary-fixed":"#e0e2ff","surface-container-lowest":"#f0f2f8","on-surface":"#2e3040","surface":"#e8eaf0","surface-tint":"#6366f1","error-container":"#fee2e2","surface-container":"#e2e4ea","background":"#e8eaf0","on-tertiary-fixed-variant":"#5b21b6","tertiary-fixed":"#ede9fe","outline":"#8a8c9a","surface-variant":"#dcdee4","surface-container-highest":"#d6d8de","secondary-fixed":"#d8dae6","secondary":"#6c6e7e","surface-container-high":"#dcdee4","tertiary-container":"#a78bfa","inverse-surface":"#2e3040","inverse-on-surface":"#e8eaf0","on-primary-fixed-variant":"#4338ca","secondary-fixed-dim":"#b8baca","on-error-container":"#991b1b","secondary-container":"#d8dae6","tertiary-fixed-dim":"#c4b5fd","error":"#dc2626","on-error":"#ffffff","on-primary-fixed":"#1e1b4b","on-secondary-container":"#585a68","on-surface-variant":"#585a68","surface-container-low":"#e5e7ed","surface-dim":"#d4d6dc","tertiary":"#7c3aed","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#404252","primary-fixed-dim":"#a5b4fc","on-primary":"#ffffff","surface-bright":"#edeef4","on-background":"#2e3040","on-secondary":"#ffffff","primary-container":"#818cf8","on-secondary-fixed":"#1a1b26","inverse-primary":"#a5b4fc"},"borderRadius":{"DEFAULT":"0.5rem","lg":"1rem","xl":"1.5rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"body":["Plus Jakarta Sans"],"label":["Plus Jakarta Sans"]},"fontSize":{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[6px_6px_16px_rgba(0,0,0,0.05),-6px_-6px_16px_rgba(255,255,255,0.7)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><a class="flex items-center gap-2" data-path="beranda" href="#"><span class="text-base font-headline font-bold tracking-tight text-on-surface">ARIS <span class="text-primary">//</span> WEB.DEV</span></a><span class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-label font-semibold uppercase tracking-wider bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>OPEN FOR CONTRACT &amp; HIRE</span></div><nav class="hidden lg:flex items-center gap-1 p-1.5 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.05),inset_-3px_-3px_6px_rgba(255,255,255,0.6)]" data-active-classes="text-primary font-semibold shadow-[inset_2px_2px_5px_rgba(0,0,0,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.7)] rounded-xl bg-surface"><a aria-current="page" class="px-3.5 py-2 transition-all text-primary font-semibold shadow-[inset_2px_2px_5px_rgba(0,0,0,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.7)] rounded-xl bg-surface" data-path="beranda" href="#">Beranda</a><a class="px-3.5 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" data-path="karya-web" href="#">Karya Web</a><a class="px-3.5 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" data-path="tech-stack" href="#">Tech Stack</a><a class="px-3.5 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" data-path="solusi-dan-arsitektur" href="#">Solusi &amp; Arsitektur</a><a class="px-3.5 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" data-path="ulasan" href="#">Ulasan</a><a class="px-3.5 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" data-path="kontak" href="#">Kontak</a></nav><div class="flex items-center gap-4"><a class="px-4 py-2 rounded-xl text-xs font-headline font-semibold text-primary bg-surface shadow-[5px_5px_10px_rgba(0,0,0,0.07),-5px_-5px_10px_rgba(255,255,255,0.8)] active:shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] transition-all flex items-center gap-2" data-path="kontak" href="#"><span>Mulai Kolaborasi</span><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[4px_4px_8px_rgba(0,0,0,0.1),-3px_-3px_6px_rgba(255,255,255,0.6)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Halo (Tactile Light Dispersion) -->
+<div class="relative w-full max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-20 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative flex flex-col items-start gap-8 pb-16">
+<!-- Badge Pill -->
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface shadow-[4px_4px_10px_rgba(0,0,0,0.06),-4px_-4px_10px_rgba(255,255,255,0.8)] text-primary">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="text-xs font-label font-semibold tracking-wider uppercase">Full-Stack Web Architect &amp; Modern Frontend Engineer</span>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="flex flex-col gap-4 max-w-5xl">
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-headline font-semibold text-on-surface tracking-tight leading-[1.08]">
+          Muhamad Aris
+        </h1>
+<p class="text-xl sm:text-2xl lg:text-3xl font-headline font-medium text-primary leading-snug">
+          Membangun Aplikasi Web Skalabel, Akseleratif, dan Berpusat pada Pengalaman Pengguna
+        </p>
+<p class="text-base sm:text-lg text-on-surface-variant font-body leading-relaxed max-w-3xl pt-2">
+          Spesialis rekayasa frontend modern berkinerja tinggi, SSR/Jamstack, integrasi API GraphQL &amp; REST, serta arsitektur cloud serverless dengan kepuasan interaksi mikro yang presisi dan estetika taktil.
+        </p>
+</div>
+<!-- Dual Call-to-Actions -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3.5 rounded-xl bg-surface text-primary font-headline font-semibold text-sm shadow-[6px_6px_14px_rgba(0,0,0,0.08),-6px_-6px_14px_rgba(255,255,255,0.8)] hover:shadow-[3px_3px_8px_rgba(0,0,0,0.06),-3px_-3px_8px_rgba(255,255,255,0.7)] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.07),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] transition-all flex items-center gap-2.5" href="#proyek">
+<span>Eksplorasi Proyek Web</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</a>
+<a class="px-6 py-3.5 rounded-xl bg-surface text-on-surface-variant hover:text-on-surface font-headline font-semibold text-sm shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] active:shadow-[inset_5px_5px_10px_rgba(0,0,0,0.09),inset_-5px_-5px_10px_rgba(255,255,255,0.8)] transition-all flex items-center gap-2.5" href="#kontak">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Unduh CV / Resume</span>
+</a>
+</div>
+<!-- Metrics Bento Bar -->
+<div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-5 pt-8">
+<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-1 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-3xl lg:text-4xl font-headline font-semibold text-primary">6+ Tahun</span>
+<span class="material-symbols-outlined text-on-surface-variant/50 text-[22px]">history_edu</span>
+</div>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant pt-2">Pengalaman Web Full-Stack</span>
+</div>
+<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-1 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-3xl lg:text-4xl font-headline font-semibold text-primary">45+ Web Apps</span>
+<span class="material-symbols-outlined text-on-surface-variant/50 text-[22px]">rocket_launch</span>
+</div>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant pt-2">Production Deployed</span>
+</div>
+<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-1 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-3xl lg:text-4xl font-headline font-semibold text-primary">99.9%</span>
+<span class="material-symbols-outlined text-on-surface-variant/50 text-[22px]">verified_user</span>
+</div>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant pt-2">Uptime &amp; Reliability SLA</span>
+</div>
+<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-1 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-3xl lg:text-4xl font-headline font-semibold text-primary">&lt; 0.8s</span>
+<span class="material-symbols-outlined text-on-surface-variant/50 text-[22px]">speed</span>
+</div>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant pt-2">Core Web Vitals LCP Benchmark</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Showcase Proyek Web Pilihan -->
+<section class="pt-16 pb-20 flex flex-col gap-10" id="proyek">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs font-label font-semibold tracking-wider text-primary uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Karya Terpilih</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-headline font-semibold text-on-surface">
+            Karya Web &amp; Arsitektur Terverifikasi
+          </h2>
+</div>
+<p class="text-sm font-body text-on-surface-variant max-w-md">
+          Implementasi rekayasa perangkat lunak berskala enterprise dengan keunggulan teknis, performa instan, dan kepuasan interaksi.
+        </p>
+</div>
+<!-- Bento Grid Proyek -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Project 1: Big Showcase Card -->
+<article class="lg:col-span-12 p-8 lg:p-10 rounded-3xl bg-surface shadow-[8px_8px_20px_rgba(0,0,0,0.06),-8px_-8px_20px_rgba(255,255,255,0.8)] flex flex-col lg:flex-row gap-8 items-center justify-between">
+<div class="w-full lg:w-7/12 flex flex-col gap-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-lg text-[11px] font-label font-medium bg-surface text-primary shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Next.js 14</span>
+<span class="px-3 py-1 rounded-lg text-[11px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">TypeScript</span>
+<span class="px-3 py-1 rounded-lg text-[11px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">ClickHouse</span>
+<span class="px-3 py-1 rounded-lg text-[11px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Apache ECharts</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface">
+                SaaS Pulse Analytics — Real-time Web Observability Platform
+              </h3>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed">
+                Platform telemetri performa web real-time yang memproses event stream berskala masif dengan latensi sub-detik. Dilengkapi visualisasi grafik interaktif adaptif, tracing sesi anonim, dan anomali detection engine.
+              </p>
+</div>
+<!-- Metrics Pills -->
+<div class="grid grid-cols-3 gap-3 pt-2">
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_5px_rgba(0,0,0,0.05),inset_-2px_-2px_5px_rgba(255,255,255,0.6)] flex flex-col">
+<span class="text-base sm:text-lg font-headline font-semibold text-primary">100k+</span>
+<span class="text-[10px] font-label text-on-surface-variant">Event / Detik</span>
+</div>
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_5px_rgba(0,0,0,0.05),inset_-2px_-2px_5px_rgba(255,255,255,0.6)] flex flex-col">
+<span class="text-base sm:text-lg font-headline font-semibold text-primary">&lt; 120ms</span>
+<span class="text-[10px] font-label text-on-surface-variant">Sub-second Query</span>
+</div>
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_5px_rgba(0,0,0,0.05),inset_-2px_-2px_5px_rgba(255,255,255,0.6)] flex flex-col">
+<span class="text-base sm:text-lg font-headline font-semibold text-primary">Adaptive</span>
+<span class="text-[10px] font-label text-on-surface-variant">Light/Dark Mode</span>
+</div>
+</div>
+<!-- Action Links -->
+<div class="flex items-center gap-4 pt-3">
+<a class="px-4 py-2.5 rounded-xl bg-surface text-primary text-xs font-headline font-semibold shadow-[4px_4px_8px_rgba(0,0,0,0.07),-4px_-4px_8px_rgba(255,255,255,0.8)] active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.07),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="#kontak">
+<span>Lihat Studi Kasus</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+<a class="px-4 py-2.5 rounded-xl bg-surface text-on-surface-variant text-xs font-headline font-semibold shadow-[inset_2px_2px_5px_rgba(0,0,0,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.7)] hover:text-primary transition-all flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span>Live Preview</span>
+</a>
+</div>
+</div>
+<!-- Project Graphic Mockup -->
+<div class="w-full lg:w-5/12">
+<div class="p-4 rounded-2xl bg-surface shadow-[inset_4px_4px_10px_rgba(0,0,0,0.06),inset_-4px_-4px_10px_rgba(255,255,255,0.7)] flex flex-col gap-3">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/40"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/20"></span>
+</div>
+<span class="text-[10px] font-label text-on-surface-variant">pulse.observability.live</span>
+</div>
+<img class="w-full h-56 object-cover rounded-xl" data-alt="High-resolution web dashboard interface of SaaS Pulse Analytics showing real-time event graphs, telemetry charts, soft UI neomorphic cards, and subtle purple accents on light gray canvas with clean typography and high contrast visualization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiTGcxZZc-lYwAWv4NNg295IEVe8scISbUDXKE5NV_tNN0N1eT7mYnwxiVSTlSoQtkvRra0hvbbNsMWaUPhMG8uKZxZByMut3bd3nK_yCTOzbQiTGwFPgMiWatmaoSFcR4xwyRgp-Ow9gFOYCVhERYUEXng4_HmXjD01_0dbtQLXz3_EKOFAIsUclhhwSYSTObaGyjb2Dyz29VwIc3pAhZJVH7RmCQYaXdtadCdqUGKKnUapXEooMx"/>
+</div>
+</div>
+</article>
+<!-- Project 2: OmniStore Cloud -->
+<article class="lg:col-span-6 p-8 rounded-3xl bg-surface shadow-[8px_8px_20px_rgba(0,0,0,0.06),-8px_-8px_20px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="p-3 rounded-2xl bg-surface shadow-[inset_3px_3px_8px_rgba(0,0,0,0.06),inset_-3px_-3px_8px_rgba(255,255,255,0.7)]">
+<img class="w-full h-44 object-cover rounded-xl" data-alt="Modern headless e-commerce storefront UI showcase on desktop device, displaying minimal fashion products, soft cards, elegant typography, responsive cart drawer, and high key luminous studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAik6xy7T6axSp0EGZYj2kLpoamwIp_pYcyDXQpD3dhRKf24gRY7iJn-mtIqu30zdFGNtyRSDLmwirgOg7nv69wR0KFJkVD-VsHSqe4DvxHOlCXnlclVy2xwBK8x658KfZLWmj1lUMxEXVuBds0hzM92eyXXPCmx_EXj0AedqyhsK8SYpMNtCrjW7kwYVztXi9fjI0WcrrW43rYGXXcaPkYZXlSWpxbbG8tVIfsOPqkAkbdHndus03A"/>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-primary shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">React / Remix</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Shopify Storefront</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Stripe Connect</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Redis Cache</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">
+              OmniStore Cloud — Headless E-Commerce Experience
+            </h3>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+              Arsitektur headless commerce dengan edge SSR render, sinkronisasi inventaris multi-region instan, dan checkout express terintegrasi Stripe.
+            </p>
+<div class="grid grid-cols-2 gap-3 pt-1">
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)]">
+<span class="text-base font-headline font-semibold text-primary">2.4x</span>
+<p class="text-[10px] font-label text-on-surface-variant">Conversion Lift</p>
+</div>
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)]">
+<span class="text-base font-headline font-semibold text-primary">99 Score</span>
+<p class="text-[10px] font-label text-on-surface-variant">Google Lighthouse</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="px-4 py-2 rounded-xl bg-surface text-primary text-xs font-headline font-semibold shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.8)] active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.07),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="#kontak">
+<span>Lihat Studi Kasus</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<a class="px-4 py-2 rounded-xl bg-surface text-on-surface-variant text-xs font-headline font-semibold shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] hover:text-primary transition-all flex items-center gap-1.5" href="https://github.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span>GitHub Repo</span>
+</a>
+</div>
+</article>
+<!-- Project 3: CollabCanvas -->
+<article class="lg:col-span-6 p-8 rounded-3xl bg-surface shadow-[8px_8px_20px_rgba(0,0,0,0.06),-8px_-8px_20px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="p-3 rounded-2xl bg-surface shadow-[inset_3px_3px_8px_rgba(0,0,0,0.06),inset_-3px_-3px_8px_rgba(255,255,255,0.7)]">
+<img class="w-full h-44 object-cover rounded-xl" data-alt="Vector collaborative whiteboard web application UI showing infinite digital canvas, multiple colored user cursors, diagram blocks, neat wireframes, and soft light ambient styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4SjgVUrbo0wMcqmGcIbjw1HdqeDLYg2WhpOTMSsGRDmVls3xRuh__qqrjN49KePJ8ELUc4ivTT60-ExeThNo199zyKoY-m247qhINbhY0lGssmZ1Xh49DOFI22YCzhsTYDZtOij8euBXSdewQBxQHbiPRhNA7mr4_e-O8bo5UmdKHFgDXKmM4-jXfZEeEScDK1vceP_HkHVd5GxF7b9iFRTZo8NSJD7wF2RgPDdIVJidiAhhG_j9V"/>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-primary shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Vue 3 / Pinia</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">WebSockets</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">WebGL Canvas</span>
+<span class="px-2.5 py-1 rounded-lg text-[10px] font-label font-medium bg-surface text-on-surface-variant shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)]">Node.js</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">
+              CollabCanvas — Collaborative Real-Time Whiteboard
+            </h3>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+              Solusi kanvas digital tanpa batas dengan koordinat multi-kursor peer-to-peer real-time, hardware-accelerated rendering, dan snapshot state compression.
+            </p>
+<div class="grid grid-cols-2 gap-3 pt-1">
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)]">
+<span class="text-base font-headline font-semibold text-primary">&lt; 30ms</span>
+<p class="text-[10px] font-label text-on-surface-variant">Sync Latency</p>
+</div>
+<div class="p-3 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)]">
+<span class="text-base font-headline font-semibold text-primary">60 FPS</span>
+<p class="text-[10px] font-label text-on-surface-variant">Canvas Rendering</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="px-4 py-2 rounded-xl bg-surface text-primary text-xs font-headline font-semibold shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.8)] active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.07),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="#kontak">
+<span>Lihat Studi Kasus</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<a class="px-4 py-2 rounded-xl bg-surface text-on-surface-variant text-xs font-headline font-semibold shadow-[inset_2px_2px_4px_rgba(0,0,0,0.05),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] hover:text-primary transition-all flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Demo Publik</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 3: Matriks Keahlian & Teknologi Web -->
+<section class="pt-8 pb-20 flex flex-col gap-10">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs font-label font-semibold tracking-wider text-primary uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Kemampuan Teknis Teruji</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-headline font-semibold text-on-surface">
+          Matriks Keahlian &amp; Arsitektur Web
+        </h2>
+<p class="text-sm font-body text-on-surface-variant max-w-2xl">
+          Kombinasi kedalaman rekayasa frontend kontemporer dipadukan dengan stabilitas arsitektur backend terdistribusi dan reliabilitas deployment berbasis cloud.
+        </p>
+</div>
+<!-- Bento Grid 4 Domains -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Domain 1: Frontend Engineering -->
+<div class="p-6 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">devices</span>
+</div>
+<div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Frontend Engineering</h3>
+<p class="text-xs text-on-surface-variant mt-1">Interaksi responsif, reaktivitas modern &amp; Core Web Vitals.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Next.js</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">React</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">TypeScript</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Vue.js</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Tailwind CSS</span>
+</div>
+</div>
+<!-- Gauge/Indicator -->
+<div class="pt-2">
+<div class="flex items-center justify-between text-xs font-label mb-1.5">
+<span class="text-on-surface-variant">Proficiency Score</span>
+<span class="text-primary font-semibold">98%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 98%;"></div>
+</div>
+</div>
+</div>
+<!-- Domain 2: Backend & API Architecture -->
+<div class="p-6 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">dns</span>
+</div>
+<div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Backend &amp; API Architecture</h3>
+<p class="text-xs text-on-surface-variant mt-1">Microservices, pipeline data &amp; integritas skema data.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Node.js</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Go</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">NestJS</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">GraphQL</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">PostgreSQL</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Redis</span>
+</div>
+</div>
+<!-- Gauge/Indicator -->
+<div class="pt-2">
+<div class="flex items-center justify-between text-xs font-label mb-1.5">
+<span class="text-on-surface-variant">Proficiency Score</span>
+<span class="text-primary font-semibold">92%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 92%;"></div>
+</div>
+</div>
+</div>
+<!-- Domain 3: Cloud, DevOps & CI/CD -->
+<div class="p-6 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_sync</span>
+</div>
+<div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Cloud, DevOps &amp; CI/CD</h3>
+<p class="text-xs text-on-surface-variant mt-1">Otomasi deployment tanpa downtime &amp; skalabilitas elastis.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Docker</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Kubernetes</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">AWS / Vercel</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">GitHub Actions</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Terraform</span>
+</div>
+</div>
+<!-- Gauge/Indicator -->
+<div class="pt-2">
+<div class="flex items-center justify-between text-xs font-label mb-1.5">
+<span class="text-on-surface-variant">Proficiency Score</span>
+<span class="text-primary font-semibold">90%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+<!-- Domain 4: Testing & Code Quality -->
+<div class="p-6 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Testing &amp; Code Quality</h3>
+<p class="text-xs text-on-surface-variant mt-1">Validasi menyeluruh, E2E browser automation &amp; Clean Code.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Jest</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Playwright</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Vitest</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">Storybook</span>
+<span class="px-2 py-1 rounded-lg text-[10px] font-label text-on-surface-variant bg-surface shadow-[inset_1.5px_1.5px_3px_rgba(0,0,0,0.05),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.6)]">TDD / Clean Arch</span>
+</div>
+</div>
+<!-- Gauge/Indicator -->
+<div class="pt-2">
+<div class="flex items-center justify-between text-xs font-label mb-1.5">
+<span class="text-on-surface-variant">Proficiency Score</span>
+<span class="text-primary font-semibold">94%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Filosofi Rekayasa Web (Web Craftsmanship Pillars) -->
+<section class="pt-6 pb-20 flex flex-col gap-10">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 text-xs font-label font-semibold tracking-wider text-primary uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Prinsip Fundamental</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-headline font-semibold text-on-surface">
+          Filosofi Rekayasa Web
+        </h2>
+<p class="text-sm font-body text-on-surface-variant">
+          Pilar komputasi dan pengalaman pengguna yang memastikan setiap baris kode bernilai jangka panjang bagi ekosistem bisnis.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">Performa Web Tanpa Kompromi</h3>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+            Zero-bloat bundle size, edge rendering instan, dan optimasi otomatis font serta media. Setiap milidetik dihemat demi mengoptimalkan rasio retensi pengguna.
+          </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-[11px] font-label font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Sub-second Time to Interactive</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">Aksesibilitas &amp; Standar W3C</h3>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+            Kepatuhan WCAG 2.1 AA, navigasi keyboard terstruktur, aria-labels tepat, dan semantik HTML murni. Aksesibilitas adalah hak inklusif setiap pengguna internet.
+          </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-[11px] font-label font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Semantik Murni &amp; Ramah Screen-Reader</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">Skalabilitas &amp; Ketahanan Arsitektur</h3>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+            Modular design systems, type-safety end-to-end dengan TypeScript, dan strategi caching bertingkat untuk aplikasi yang tetap tangguh di lalu lintas ekstrem.
+          </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-[11px] font-label font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Modular &amp; Type-Safe End-to-End</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Testimoni Klien & Kolaborator -->
+<section class="pt-6 pb-20 flex flex-col gap-10">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs font-label font-semibold tracking-wider text-primary uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Pengakuan Rekanan</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-headline font-semibold text-on-surface">
+          Ulasan Klien &amp; Rekayasa Terbukti
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-body text-on-surface leading-relaxed italic">
+              "Aris membawakan standard rekayasa web kelas dunia ke startup kami. Optimasi Next.js dan pipeline GraphQL yang ia susun memotong response time dashboard kami hingga 60%."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.08),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center font-headline font-bold text-xs text-primary">
+              DA
+            </div>
+<div class="flex flex-col">
+<span class="text-xs font-headline font-semibold text-on-surface">Dimas Adiwidya</span>
+<span class="text-[11px] font-label text-on-surface-variant">CTO at FinScale Asia</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-body text-on-surface leading-relaxed italic">
+              "Sangat jarang menemukan developer yang menguasai arsitektur serverless mendalam sekaligus memiliki cita rasa estetika visual taktil yang rapi seperti Aris. Hasil produksinya selalu memuaskan."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.08),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center font-headline font-bold text-xs text-primary">
+              CL
+            </div>
+<div class="flex flex-col">
+<span class="text-xs font-headline font-semibold text-on-surface">Clarissa Larasati</span>
+<span class="text-[11px] font-label text-on-surface-variant">Lead Product Designer at Nordix</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-8 rounded-3xl bg-surface shadow-[6px_6px_16px_rgba(0,0,0,0.06),-6px_-6px_16px_rgba(255,255,255,0.8)] flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-body text-on-surface leading-relaxed italic">
+              "Ketepatan waktu, kualitas testing otomatis, dan dokumentasi arsitektur bersih yang ditinggalkan Aris memudahkan tim internal kami melanjutkan ekspansi produk dengan percaya diri."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.08),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center font-headline font-bold text-xs text-primary">
+              RF
+            </div>
+<div class="flex flex-col">
+<span class="text-xs font-headline font-semibold text-on-surface">Rian Fathurrahman</span>
+<span class="text-[11px] font-label text-on-surface-variant">Engineering Director at Omnia</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Kontak & Kolaborasi Web (Tactile Form Uplink) -->
+<section class="pt-6 pb-12 flex flex-col gap-10" id="kontak">
+<div class="p-8 lg:p-14 rounded-3xl bg-surface shadow-[10px_10px_24px_rgba(0,0,0,0.06),-10px_-10px_24px_rgba(255,255,255,0.85)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Info Column -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-xs font-label font-semibold tracking-wider text-primary uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Inisiasi Proyek</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-headline font-semibold text-on-surface leading-tight">
+                Mari Diskusikan Solusi Digital Anda Berikutnya
+              </h2>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed">
+                Tersedia untuk proyek kontrak jangka menengah/panjang, konsultasi arsitektur web modern, audit performa frontend, atau pembentukan fondasi aplikasi SaaS baru.
+              </p>
+</div>
+<!-- Direct Contact Soft Badges -->
+<div class="flex flex-col gap-3">
+<span class="text-xs font-label font-bold uppercase tracking-wider text-on-surface">Akses Langsung:</span>
+<div class="flex flex-col gap-2.5">
+<a class="p-3.5 rounded-2xl bg-surface shadow-[4px_4px_10px_rgba(0,0,0,0.05),-4px_-4px_10px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-3" href="mailto:hello@muhamadaris.dev">
+<div class="w-8 h-8 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-label text-on-surface-variant uppercase">Email Utama</span>
+<span class="text-xs font-headline font-semibold text-on-surface">hello@muhamadaris.dev</span>
+</div>
+</a>
+<a class="p-3.5 rounded-2xl bg-surface shadow-[4px_4px_10px_rgba(0,0,0,0.05),-4px_-4px_10px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-3" href="https://wa.me/6281234567890" rel="noreferrer" target="_blank">
+<div class="w-8 h-8 rounded-xl bg-surface shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-label text-on-surface-variant uppercase">Direct Messaging / WhatsApp</span>
+<span class="text-xs font-headline font-semibold text-on-surface">+62 812-3456-7890 (Work Chat)</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Avail Status Badge -->
+<div class="p-4 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.05),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary animate-ping"></span>
+<p class="text-xs font-body text-on-surface-variant">
+                Status saat ini: <strong class="text-on-surface font-semibold">Tersedia untuk Kontrak Q2/Q3 2025</strong>
+</p>
+</div>
+</div>
+<!-- Right Interactive Form Column -->
+<div class="lg:col-span-7 flex flex-col gap-5">
+<form class="flex flex-col gap-5" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden');">
+<!-- Input: Nama Lengkap -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Nama Lengkap Anda</span>
+</label>
+<div class="rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] px-4 py-3.5 focus-within:shadow-[inset_4px_4px_8px_rgba(99,102,241,0.15),inset_-4px_-4px_8px_rgba(255,255,255,0.9)] transition-all">
+<input class="w-full bg-transparent text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-body" placeholder="Contoh: Budi Santoso" required="" type="text"/>
+</div>
+</div>
+<!-- Input: Alamat Email -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+<span>Alamat Email Profesional</span>
+</label>
+<div class="rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] px-4 py-3.5 focus-within:shadow-[inset_4px_4px_8px_rgba(99,102,241,0.15),inset_-4px_-4px_8px_rgba(255,255,255,0.9)] transition-all">
+<input class="w-full bg-transparent text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-body" placeholder="nama@perusahaan.com" required="" type="email"/>
+</div>
+</div>
+<!-- Select: Kategori Proyek -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">category</span>
+<span>Kategori Proyek Web</span>
+</label>
+<div class="rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] px-4 py-3.5 focus-within:shadow-[inset_4px_4px_8px_rgba(99,102,241,0.15),inset_-4px_-4px_8px_rgba(255,255,255,0.9)] transition-all">
+<select class="w-full bg-transparent text-sm text-on-surface focus:outline-none font-body">
+<option class="bg-surface text-on-surface" value="fullstack-saas">Full-Stack SaaS Platform Architecture</option>
+<option class="bg-surface text-on-surface" value="frontend-revamp">Modern Frontend &amp; Core Web Vitals Optimization</option>
+<option class="bg-surface text-on-surface" value="ecommerce">Headless E-Commerce Enterprise Solution</option>
+<option class="bg-surface text-on-surface" value="consulting">Tech Stack &amp; Scalability Architecture Consultation</option>
+</select>
+</div>
+</div>
+<!-- Textarea: Ringkasan Kebutuhan -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">edit_note</span>
+<span>Ringkasan Kebutuhan &amp; Target Proyek</span>
+</label>
+<div class="rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] px-4 py-3.5 focus-within:shadow-[inset_4px_4px_8px_rgba(99,102,241,0.15),inset_-4px_-4px_8px_rgba(255,255,255,0.9)] transition-all">
+<textarea class="w-full bg-transparent text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-body resize-none" placeholder="Ceritakan tujuan bisnis, timeline perkiraan, dan ruang lingkup teknologi yang diharapkan..." required="" rows="4"></textarea>
+</div>
+</div>
+<!-- Submit Action Button -->
+<button class="w-full mt-2 py-4 px-6 rounded-2xl bg-surface text-primary font-headline font-semibold text-sm shadow-[6px_6px_14px_rgba(0,0,0,0.08),-6px_-6px_14px_rgba(255,255,255,0.85)] hover:shadow-[3px_3px_8px_rgba(0,0,0,0.06),-3px_-3px_8px_rgba(255,255,255,0.7)] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.08),inset_-4px_-4px_8px_rgba(255,255,255,0.7)] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Kirim Pesan Kolaborasi 🚀</span>
+</button>
+<!-- Success Feedback Box (Hidden by Default) -->
+<div class="hidden p-4 rounded-2xl bg-surface shadow-[inset_3px_3px_6px_rgba(0,0,0,0.05),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] flex items-center gap-3 text-xs font-body text-primary" id="formSuccess">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Terima kasih! Pesan kolaborasi Anda telah diterima. Muhamad Aris akan merespons dalam waktu 1x24 jam kerja.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface shadow-[0_-8px_20px_rgba(0,0,0,0.03)] py-16"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12"><div class="md:col-span-5 flex flex-col gap-4"><div class="flex items-center gap-2"><span class="text-lg font-headline font-bold tracking-tight text-on-surface">ARIS <span class="text-primary">//</span> WEB.DEV</span></div><p class="text-sm text-on-surface-variant font-body leading-relaxed">Muhamad Aris — Senior Full-Stack Web Developer &amp; Frontend Architect dengan fokus pada performa tinggi, keanggunan interaktif, dan skalabilitas arsitektur modern.</p><div class="flex items-center gap-2 text-xs text-on-surface-variant font-label"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Jakarta, ID (WIB / UTC+7) • Available for Q2/Q3 Projects</span></div></div><div class="md:col-span-3 flex flex-col gap-3"><span class="text-xs font-label font-bold uppercase tracking-wider text-on-surface">Navigasi Cepat</span><div class="flex flex-col gap-2"><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="beranda" href="#">Beranda</a><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="karya-web" href="#">Karya Web</a><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="tech-stack" href="#">Tech Stack &amp; Workflow</a><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="solusi-dan-arsitektur" href="#">Solusi &amp; Arsitektur</a><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="ulasan" href="#">Ulasan Klien</a><a class="text-xs text-on-surface-variant hover:text-primary transition-colors" data-path="kontak" href="#">Hubungi Langsung</a></div></div><div class="md:col-span-4 flex flex-col gap-3"><span class="text-xs font-label font-bold uppercase tracking-wider text-on-surface">Kanal Sosial &amp; Profil</span><p class="text-xs text-on-surface-variant font-body leading-relaxed mb-1">Terhubung untuk diskusi teknis, rekayasa produk, atau eksplorasi ide digital.</p><div class="flex flex-wrap gap-2.5"><a class="px-3.5 py-2 rounded-xl text-xs font-medium text-on-surface-variant bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="https://github.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[15px]">code</span>GitHub</a><a class="px-3.5 py-2 rounded-xl text-xs font-medium text-on-surface-variant bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="https://linkedin.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[15px]">work</span>LinkedIn</a><a class="px-3.5 py-2 rounded-xl text-xs font-medium text-on-surface-variant bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="https://x.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[15px]">alternate_email</span>Twitter/X</a><a class="px-3.5 py-2 rounded-xl text-xs font-medium text-on-surface-variant bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.7)] hover:text-primary active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.6)] transition-all flex items-center gap-1.5" href="https://dribbble.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[15px]">palette</span>Dribbble</a></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant font-label shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]"><p>© 2025 Muhamad Aris. All rights reserved.</p><p class="text-[11px] text-on-surface-variant/80">Designed with Silk Soft UI Archetype • Built with Tailwind CSS</p></div></div></footer></body></html>
