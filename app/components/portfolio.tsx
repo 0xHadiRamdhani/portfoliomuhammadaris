@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   contact,
@@ -14,33 +14,19 @@ import {
   statistics,
   values,
 } from "@/app/data/portfolio";
-import profileImage from "../../assets/image.png";
+import profileImage from "../../assets/image.jpeg";
 
 function SectionLabel({ children, muted = false }: { children: React.ReactNode; muted?: boolean }) {
   return <span className={muted ? "label label-muted" : "label"}>{children}</span>;
 }
 
-function SectionIntro({
-  label,
-  title,
-  description,
-  muted = false,
+function ProjectCard({
+  project,
+  onOpen,
 }: {
-  label: string;
-  title: string;
-  description?: string;
-  muted?: boolean;
+  project: (typeof projects)[number];
+  onOpen: (project: (typeof projects)[number]) => void;
 }) {
-  return (
-    <div className={description ? "center" : undefined}>
-      <SectionLabel muted={muted}>{label}</SectionLabel>
-      <h2>{title}</h2>
-      {description ? <p>{description}</p> : null}
-    </div>
-  );
-}
-
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
     <article className="card" key={project.title}>
       <div className={`visual ${project.theme}`}>
@@ -60,10 +46,10 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <div className="card-links">
-          <a href="#kontak">Buka demo ↗</a>
-          <a href="#kontak">Repositori &lt;/&gt;</a>
-        </div>
+        <button className="card-detail-button" type="button" onClick={() => onOpen(project)}>
+          <span>Lihat detail proyek</span>
+          <span aria-hidden="true">↗</span>
+        </button>
       </div>
     </article>
   );
@@ -139,6 +125,21 @@ function ContactForm() {
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("Semua");
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
+  const projectDialogRef = useRef<HTMLDialogElement>(null);
+  const projectCategories = ["Semua", ...new Set(projects.map((project) => project.category))];
+  const visibleProjects =
+    selectedCategory === "Semua"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
+
+  useEffect(() => {
+    const dialog = projectDialogRef.current;
+    if (selectedProject && dialog && !dialog.open) {
+      dialog.showModal();
+    }
+  }, [selectedProject]);
 
   return (
     <main>
@@ -176,20 +177,32 @@ export default function Portfolio() {
       </header>
 
       <section id="beranda" className="hero section">
-        <p className="kicker">{profile.kicker}</p>
-        <h1>
-          {profile.headline} <em>{profile.highlight}</em>
-        </h1>
-        <p className="hero-copy">{profile.description}</p>
-        <div className="hero-actions">
-          <a className="button primary" href="#proyek">
-            Lihat portofolio proyek →
-          </a>
-          <a className="button secondary" href="#kontak">
-            ↓ Unduh CV / Resume
-          </a>
+        <div className="hero-content">
+          <div className="hero-copy-block">
+            <p className="kicker"><span />{profile.kicker} · Jakarta, Indonesia</p>
+            <h1>{profile.highlight}</h1>
+            <p className="hero-role">{profile.role}</p>
+            <p className="hero-statement">{profile.headline}</p>
+            <p className="hero-copy">{profile.description}</p>
+            <div className="hero-actions">
+              <a className="button primary" href="#proyek">
+                Jelajahi proyek <span aria-hidden="true">↘</span>
+              </a>
+              <a className="button secondary" href="#kontak">
+                Hubungi saya <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div className="hero-portrait">
+            <div className="portrait-orbit" />
+            <Image className="hero-portrait-image" src={profileImage} alt={profile.name} priority />
+            <div className="portrait-caption">
+              <span>Systems / Creative Tech</span>
+              <span>Portfolio / 2026</span>
+            </div>
+          </div>
         </div>
-        <div className="stats">
+        <div className="stats" aria-label="Ringkasan pengalaman">
           {statistics.map((statistic) => (
             <div key={statistic.label}>
               <b>{statistic.value}</b>
@@ -226,11 +239,76 @@ export default function Portfolio() {
             Eksplorasi arsitektur komputasi awan, visualisasi data real-time, dan sistem desain untuk platform modern.
           </p>
         </div>
+        <div className="project-browser">
+          <div className="project-filters" role="group" aria-label="Filter kategori proyek">
+            {projectCategories.map((category) => (
+              <button
+                key={category}
+                className={selectedCategory === category ? "project-filter active" : "project-filter"}
+                type="button"
+                aria-pressed={selectedCategory === category}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <p className="project-count" aria-live="polite">
+            {visibleProjects.length} proyek ditampilkan
+          </p>
+        </div>
         <div className="project-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {visibleProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} onOpen={setSelectedProject} />
           ))}
         </div>
+        <dialog
+          ref={projectDialogRef}
+          className="project-dialog"
+          aria-labelledby="project-dialog-title"
+          onClose={() => setSelectedProject(null)}
+          onCancel={(event) => {
+            event.preventDefault();
+            projectDialogRef.current?.close();
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              event.preventDefault();
+              projectDialogRef.current?.close();
+            }
+          }}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) event.currentTarget.close();
+          }}
+        >
+          {selectedProject ? (
+            <div className="project-dialog-copy">
+              <div className="project-dialog-header">
+                <div>
+                  <p className="project-dialog-category">{selectedProject.category}</p>
+                  <h2 id="project-dialog-title">{selectedProject.title}</h2>
+                </div>
+                <button
+                  className="project-dialog-close"
+                  type="button"
+                  aria-label="Tutup detail proyek"
+                  onClick={() => projectDialogRef.current?.close()}
+                >
+                  ×
+                </button>
+              </div>
+              <p className="project-dialog-description">{selectedProject.description}</p>
+              <div className="project-dialog-stack">
+                <h3>Teknologi</h3>
+                <div className="tags">
+                  {selectedProject.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </dialog>
       </section>
 
       <section id="keterampilan" className="section section-space">
@@ -250,15 +328,6 @@ export default function Portfolio() {
       </section>
 
       <section id="tentang" className="section about section-space">
-        <div className="portrait">
-          <i />
-          <Image className="portrait-image" src={profileImage} alt={profile.name} priority />
-          <div>
-            <strong>{profile.name}</strong>
-            <span>{profile.location}</span>
-          </div>
-        </div>
-
         <div>
           <SectionLabel>Mengenal Lebih Dekat</SectionLabel>
           <h2>Menggabungkan rekayasa sistem dengan cita rasa desain</h2>
@@ -269,6 +338,11 @@ export default function Portfolio() {
               <ValueCard key={value.title} value={value} />
             ))}
           </div>
+        </div>
+        <div className="about-note">
+          <span>Lokasi saat ini</span>
+          <strong>{profile.location}</strong>
+          <i aria-hidden="true">↗</i>
         </div>
       </section>
 
